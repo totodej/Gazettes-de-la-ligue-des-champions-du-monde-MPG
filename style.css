@@ -1,0 +1,155 @@
+body{
+    background-image: url('images/background.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0 auto;
+}
+
+header{
+    width: 45%;
+    margin: auto;
+}
+
+header h1{
+    text-align : center;
+    font-size: 40px;
+    color: white;
+    font-family: 'Concert One', cursive;
+    text-shadow: 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000, 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
+}
+
+header .logoMPG{
+    margin: auto;
+    width: 32%;
+    margin-top: -20px;
+}
+
+header img{
+    width: 200px;
+}
+
+header nav ul{
+    display: flex;
+}
+
+header nav ul li{
+    list-style: none;
+    padding: 10px 0px;
+    color: white;
+    font-family: 'Concert One', cursive;
+    text-shadow: 1px 0 0 #000, -1px 0 0 #000, 0 1px 0 #000, 0 -1px 0 #000, 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
+    font-size: 20px;
+    width: 150px;
+}
+
+.show{
+    display: block;
+}
+
+.show section{
+    border: solid black 2px;
+    padding: 35px;
+    width: 650px;
+    margin: auto;
+    margin-top: 50px;
+    background-color: white;
+}
+
+.show h3{
+    border: solid black 2px;
+    width: 120px;
+    text-align: center;
+    padding: 5px;
+    margin-left: 50px;
+}
+
+.show p{
+    width: 550px;
+    margin: auto;
+    font-family: 'Pangolin', cursive;
+}
+
+/* Les Participants */
+
+.showParticipants{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.players{
+    width: 240px;
+    border: solid #4cd137 2px;
+    margin: 25px;
+    padding: 25px;
+    background-color: white;
+}
+
+.players img{
+    width: 240px;
+    border-radius: 120px;
+    border: solid #4cd137 2px;
+}
+
+.players p{
+    text-align: center;
+}
+
+.players button{
+    margin-left: 74px;
+    padding: 7px 22px;
+    border-radius: 5px;
+    background-color: #3498db;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* Les Equipes */
+
+.dropDownList{
+    margin: auto;
+    width: 12%;
+}
+
+.showEquipes table{
+    border: solid #3498db 2px;
+    background-color: white;
+    margin: auto;
+    margin-top: 50px; 
+    width: 650px;
+    border-collapse: collapse;
+}
+
+.showEquipes table th{
+    background-color : #4cd137;
+    color:white;
+    padding: 12px;
+    width: 200px;
+}
+
+.showEquipes table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.showEquipes table td{
+    border: solid #3498db 1px;
+    width : 188px;
+    text-align: center;
+    padding: 5px;
+}
+
+.showEquipes table tr{
+    border: solid #3498db 1px;
+}
+
+
+.showEquipes .dropDownList select{
+    height: 35px;
+    width: 169px;
+    font-weight: bold;
+}
+
+
