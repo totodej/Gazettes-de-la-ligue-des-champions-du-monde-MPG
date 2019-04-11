@@ -48,6 +48,7 @@ var menu = [{name: 'Gazettes', liClass: 'gazettes'},
         {name: 'Equipes', liClass: 'equipes'}, 
         {name: 'Classement', liClass: 'classement'}
     ];
+
 var showNavBar = document.querySelector('nav ul');
 for(var i = 0; i < menu.length; i++){
     showNavBar.innerHTML += '<li class="' + menu[i].liClass + '">' + menu[i].name + '</li>';
@@ -61,7 +62,7 @@ var gazettes = document.querySelector('.gazettes');
 var participants = document.querySelector('.participants');
 var equipes = document.querySelector('.equipes');
 var classement = document.querySelector('.classement');
-var selectTeam = document.querySelector('.showEquipes .dropDownList select');
+var selectTeam = document.querySelector('.showEquipes .dropDownList');
 var showTable = document.querySelector('.showEquipes table tbody');
 var showName = document.querySelector('.showName');
 
@@ -73,6 +74,8 @@ function news(){
     showEquipes.style.display = 'none';
     showClassement.style.display = 'none';
     show.innerHTML = '';
+    window.scrollTo(500, 0);
+
     if(rubriques[0].title === '1ère journée'){
         rubriques = rubriques.reverse();
     }
@@ -89,6 +92,7 @@ function users(){
     showEquipes.style.display = 'none';
     showClassement.style.display = 'none';
     showParticipants.innerHTML = '';
+    window.scrollTo(500, 0);
 
     for(var i = 0; i < teams.length; i++){
         showParticipants.innerHTML += '<div class="players"><img src="' + teams[i].image + '"><p>' + teams[i].name + '</p><p>' + teams[i].player + '</p><button data-user="' + teams[i].player + '">Effectif</button></div>';
@@ -99,13 +103,12 @@ function users(){
         var button = buttons[i];
         button.addEventListener('click', function(e){
             var dataUser = this.getAttribute('data-user');
-                console.log(dataUser);
                 team();
                 for(var i = 0; i < teams.length; i++){
                     if(teams[i].player === dataUser){ 
                         selectTeam.style.display = 'none';
                         showName.innerHTML = '<h3>' + teams[i].player + '</h3><h4>Stade :<br>' + teams[i].stade + '</h4>';
-                        window.scrollTo(300, 0);
+                        window.scrollTo(500, 0);
                         showPlayers(teams[i].gardiens,'G');
                         showPlayers(teams[i].defenseurs,'D');
                         showPlayers(teams[i].milieux,'M');
@@ -126,6 +129,7 @@ function team(){
     selectTeam.style.display = 'block';
     selectTeam.innerHTML = '<option value="-">-</option>';
     showName.innerHTML = '';
+    window.scrollTo(500, 0);
 
     for(var i = 0; i < teams.length; i++){
         selectTeam.innerHTML += '<option value="' + teams[i].player + '">' + teams[i].player + '</option>';
@@ -159,6 +163,7 @@ function ranking(){
     showParticipants.style.display = 'none';
     showEquipes.style.display = 'none';
     showClassement.style.display = 'block';
+    window.scrollTo(500, 0);
 
 }
 

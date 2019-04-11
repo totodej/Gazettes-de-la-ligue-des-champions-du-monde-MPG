@@ -74,7 +74,7 @@ nav ul li:hover{
     border: solid black 2px;
     width: 120px;
     text-align: center;
-    padding: 5px;
+    padding: 5px 15px;
     margin-left: 50px;
     font-weight: bold;
 }
@@ -92,11 +92,12 @@ nav ul li:hover{
     width: 100%;
     flex-wrap: wrap;
     justify-content: center;
+    max-width: 100%;
 }
 
 .players{
     width: 240px;
-    border: solid #4cd137 2px;
+    border: solid #4cd137 4px;
     margin: 25px;
     padding: 25px;
     background-color: white;
@@ -130,6 +131,8 @@ nav ul li:hover{
 .dropDownList{
     margin: auto;
     width: 12%;
+    height: 35px;
+    font-weight: bold;
 }
 
 .showName{
@@ -170,11 +173,5 @@ nav ul li:hover{
     border: solid #3498db 1px;
 }
 
-
-.showEquipes .dropDownList select{
-    height: 35px;
-    width: 169px;
-    font-weight: bold;
-}
 
 
