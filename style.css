@@ -1,11 +1,10 @@
-
+html{
+    min-height: 100%;
+}
 
 body{
-    background: url('images/background.jpg') no-repeat center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    background-color: #000428;
+    background: linear-gradient(to top, #004e92, #000428);
     margin: 0 auto;
     font-family: 'Roboto', sans-serif;
 }
