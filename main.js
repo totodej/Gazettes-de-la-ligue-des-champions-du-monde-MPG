@@ -48,7 +48,7 @@ var menu = [{name: 'Gazettes', liClass: 'gazettes'},
         {name: 'Equipes', liClass: 'equipes'}, 
         {name: 'Classement', liClass: 'classement'}
     ];
-var showNavBar = document.querySelector('header nav ul');
+var showNavBar = document.querySelector('nav ul');
 for(var i = 0; i < menu.length; i++){
     showNavBar.innerHTML += '<li class="' + menu[i].liClass + '">' + menu[i].name + '</li>';
 }
@@ -105,7 +105,7 @@ function users(){
                     if(teams[i].player === dataUser){ 
                         selectTeam.style.display = 'none';
                         showName.innerHTML = '<h3>' + teams[i].player + '</h3><h4>Stade :<br>' + teams[i].stade + '</h4>';
-                        window.scrollTo(500, 0);
+                        window.scrollTo(300, 0);
                         showPlayers(teams[i].gardiens,'G');
                         showPlayers(teams[i].defenseurs,'D');
                         showPlayers(teams[i].milieux,'M');
