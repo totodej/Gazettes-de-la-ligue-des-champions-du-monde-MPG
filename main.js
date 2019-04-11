@@ -101,22 +101,24 @@ function users(){
     var buttons = document.querySelectorAll('.showParticipants .players button');
     for(var i = 0; i < buttons.length; i++){
         var button = buttons[i];
-        button.addEventListener('click', function(e){
-            var dataUser = this.getAttribute('data-user');
-                team();
-                for(var i = 0; i < teams.length; i++){
-                    if(teams[i].player === dataUser){ 
-                        selectTeam.style.display = 'none';
-                        showName.innerHTML = '<h3>' + teams[i].player + '</h3><h4>Stade :<br>' + teams[i].stade + '</h4>';
-                        window.scrollTo(500, 0);
-                        showPlayers(teams[i].gardiens,'G');
-                        showPlayers(teams[i].defenseurs,'D');
-                        showPlayers(teams[i].milieux,'M');
-                        showPlayers(teams[i].attaquants,'A');          
-                    }    
-                }    
-            })
+        button.addEventListener('click', eachUser);
     }
+}
+
+function eachUser(){
+    var dataUser = this.getAttribute('data-user');
+    team();
+    for(var i = 0; i < teams.length; i++){
+        if(teams[i].player === dataUser){ 
+            selectTeam.style.display = 'none';
+            showName.innerHTML = '<h3>' + teams[i].player + '</h3><p>Stade :<br>' + teams[i].stade + '</p>';
+            window.scrollTo(500, 0);
+            showPlayers(teams[i].gardiens,'G');
+            showPlayers(teams[i].defenseurs,'D');
+            showPlayers(teams[i].milieux,'M');
+            showPlayers(teams[i].attaquants,'A');          
+        }    
+    }    
 }
 
 equipes.addEventListener('click', team);
