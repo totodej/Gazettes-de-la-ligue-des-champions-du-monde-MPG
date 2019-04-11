@@ -46,6 +46,10 @@ header nav ul li{
     width: 150px;
 }
 
+header nav ul li:hover{
+    cursor: pointer;
+}
+
 .show{
     display: block;
 }

@@ -72,7 +72,9 @@ function news(){
     showEquipes.style.display = 'none';
     showClassement.style.display = 'none';
     show.innerHTML = '';
-    rubriques = rubriques.reverse();
+    if(rubriques[0].title === '1ère journée'){
+        rubriques = rubriques.reverse();
+    }
     for(var i = 0; i < rubriques.length; i++){
         show.innerHTML += '<section><h3>' + rubriques[i].title + '</h3><p>' + rubriques[i].gazette + '</p></section>' ;
     }
