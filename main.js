@@ -63,7 +63,8 @@ var equipes = document.querySelector('.equipes');
 var classement = document.querySelector('.classement');
 var selectTeam = document.querySelector('.showEquipes .dropDownList select');
 var showTable = document.querySelector('.showEquipes table tbody');
-var button = document.querySelector('.showParticipants .players button');
+var showName = document.querySelector('.showName');
+
 
 gazettes.addEventListener('click', news);
 function news(){
@@ -88,8 +89,30 @@ function users(){
     showEquipes.style.display = 'none';
     showClassement.style.display = 'none';
     showParticipants.innerHTML = '';
+
     for(var i = 0; i < teams.length; i++){
-        showParticipants.innerHTML += '<div class="players" data="' + teams[i].player + '"><img src="' + teams[i].image + '"><p>' + teams[i].name + '</p><p>' + teams[i].player + '</p><button>Effectif</button></div>'
+        showParticipants.innerHTML += '<div class="players"><img src="' + teams[i].image + '"><p>' + teams[i].name + '</p><p>' + teams[i].player + '</p><button data-user="' + teams[i].player + '">Effectif</button></div>';
+    }
+
+    var buttons = document.querySelectorAll('.showParticipants .players button');
+    for(var i = 0; i < buttons.length; i++){
+        var button = buttons[i];
+        button.addEventListener('click', function(e){
+            var dataUser = this.getAttribute('data-user');
+                console.log(dataUser);
+                team();
+                for(var i = 0; i < teams.length; i++){
+                    if(teams[i].player === dataUser){ 
+                        selectTeam.style.display = 'none';
+                        showName.innerHTML = '<h3>' + teams[i].player + '</h3><h4>Stade :<br>' + teams[i].stade + '</h4>';
+                        window.scrollTo(500, 0);
+                        showPlayers(teams[i].gardiens,'G');
+                        showPlayers(teams[i].defenseurs,'D');
+                        showPlayers(teams[i].milieux,'M');
+                        showPlayers(teams[i].attaquants,'A');          
+                    }    
+                }    
+            })
     }
 }
 
@@ -100,25 +123,29 @@ function team(){
     showEquipes.style.display = 'block';
     showClassement.style.display = 'none';
     showTable.innerHTML = '';
+    selectTeam.style.display = 'block';
     selectTeam.innerHTML = '<option value="-">-</option>';
+    showName.innerHTML = '';
 
     for(var i = 0; i < teams.length; i++){
         selectTeam.innerHTML += '<option value="' + teams[i].player + '">' + teams[i].player + '</option>';
     }
-
-    selectTeam.addEventListener('change', function(e){
-        var dataTeam = this.value;
-        showTable.innerHTML = '';
-        for(var i = 0; i < teams.length; i++){
-            if(teams[i].player === dataTeam){ 
-                showPlayers(teams[i].gardiens,'G');
-                showPlayers(teams[i].defenseurs,'D');
-                showPlayers(teams[i].milieux,'M');
-                showPlayers(teams[i].attaquants,'A');          
-            }    
-        }    
-    })  
+    selectTeam.addEventListener('change', eachTeam);
 }
+
+function eachTeam(){
+    var dataTeam = this.value;
+    showTable.innerHTML = '';
+    for(var i = 0; i < teams.length; i++){
+        if(teams[i].player === dataTeam){ 
+            showName.innerHTML = '<h4>Stade :<br>' + teams[i].stade + '</h4>';
+            showPlayers(teams[i].gardiens,'G');
+            showPlayers(teams[i].defenseurs,'D');
+            showPlayers(teams[i].milieux,'M');
+            showPlayers(teams[i].attaquants,'A');          
+        }    
+    }    
+} 
 
 function showPlayers(array,a){
     for(var y = 0; y < array.length; y++){

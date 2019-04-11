@@ -121,6 +121,11 @@ header nav ul li:hover{
     width: 12%;
 }
 
+.showName{
+    text-align: center;
+    color : white;
+}
+
 .showEquipes table{
     border: solid #3498db 2px;
     background-color: white;
