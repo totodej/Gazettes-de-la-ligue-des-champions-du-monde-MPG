@@ -175,5 +175,40 @@ nav ul li:hover{
     border: solid #3498db 1px;
 }
 
+.showClassement table{
+    border: solid #3498db 2px;
+    background-color: white;
+    margin: auto;
+    margin-top: 50px; 
+    width: 650px;
+    border-collapse: collapse;
+}
+
+.showClassement table th{
+    background-color : #4cd137;
+    color:white;
+    padding: 12px;
+    width: 200px;
+}
+
+.showClassement table th:nth-of-type(2){
+    padding: 12px 110px;
+}
+
+.showClassement table td{
+    border: solid #3498db 1px;
+    width : 188px;
+    text-align: center;
+    padding: 5px;
+}
+
+.showClassement table td:nth-of-type(3){
+    font-weight: bold;
+}
+
+.showClassement table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
 
 
