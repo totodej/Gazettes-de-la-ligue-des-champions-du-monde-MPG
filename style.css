@@ -72,18 +72,25 @@ nav ul li:hover{
 }
 
 .show h3{
-    border: solid black 2px;
-    width: 120px;
-    text-align: center;
-    padding: 5px 15px;
+    text-align: left;
     margin-left: 50px;
-    font-weight: bold;
+    font-size: 32px;
+    width: 500px;
+    margin-bottom: 0px;
+}
+
+.show h4{
+    font-size: 12px;
+    text-align: left;
+    margin-left: 50px;
+    margin-bottom: 20px;
+    color: grey;
 }
 
 .show p{
     width: 550px;
     margin: auto;
-    font-family: 'Pangolin', cursive;
+    line-height: 33px;
 }
 
 /* Les Participants */
@@ -98,16 +105,15 @@ nav ul li:hover{
 
 .players{
     width: 240px;
-    border: solid #4cd137 4px;
     margin: 25px;
     padding: 25px;
     background-color: white;
+    margin-bottom: 50px;
 }
 
 .players img{
     width: 240px;
     border-radius: 120px;
-    border: solid #4cd137 2px;
     height: 240px;
 }
 
@@ -145,12 +151,12 @@ nav ul li:hover{
 }
 
 .showEquipes table{
-    border: solid #3498db 2px;
     background-color: white;
     margin: auto;
     margin-top: 50px; 
     width: 650px;
     border-collapse: collapse;
+    margin-bottom: 50px;
 }
 
 .showEquipes table th{
@@ -158,6 +164,7 @@ nav ul li:hover{
     color:white;
     padding: 12px;
     width: 200px;
+    font-size: 18px;
 }
 
 .showEquipes table tr:nth-child(even) {
@@ -165,23 +172,18 @@ nav ul li:hover{
 }
 
 .showEquipes table td{
-    border: solid #3498db 1px;
-    width : 188px;
+    width: 188px;
     text-align: center;
-    padding: 5px;
-}
-
-.showEquipes table tr{
-    border: solid #3498db 1px;
+    padding: 13px 5px;
 }
 
 .showClassement table{
-    border: solid #3498db 2px;
     background-color: white;
     margin: auto;
     margin-top: 50px; 
     width: 650px;
     border-collapse: collapse;
+    margin-bottom: 50px;
 }
 
 .showClassement table th{
@@ -189,6 +191,7 @@ nav ul li:hover{
     color:white;
     padding: 12px;
     width: 200px;
+    font-size: 18px;
 }
 
 .showClassement table th:nth-of-type(2){
@@ -196,10 +199,9 @@ nav ul li:hover{
 }
 
 .showClassement table td{
-    border: solid #3498db 1px;
     width : 188px;
     text-align: center;
-    padding: 5px;
+    padding: 13px 5px;
 }
 
 .showClassement table td:nth-of-type(3){
@@ -210,5 +212,14 @@ nav ul li:hover{
     background-color: #f2f2f2;
 }
 
+
+footer ul li{
+    color: white;
+}
+
+footer ul li a{
+    color: white;
+    text-decoration: none;
+}
 
 
