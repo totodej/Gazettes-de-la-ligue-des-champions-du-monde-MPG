@@ -20,6 +20,7 @@ header h1{
     color: white;
     font-family: 'Concert One', cursive;
     text-shadow: -1px 0 0 #000, 1px 0 0 #000, 0 1px 0 #000, 0 -1px 0 #000, 0px 0px #000, 0px 0px 0 #000, 0px 0px 0 #000, 0px 0px 0 #000;
+    cursor: pointer;
 }
 
 header .logoMPG{
