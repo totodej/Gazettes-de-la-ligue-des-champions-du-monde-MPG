@@ -183,16 +183,19 @@ function ranking(){
     window.scrollTo(500, 0);
     
     var sorted = teams.slice().sort(function(a,b){
+        
         if(b.points - a.points){
             return b.points - a.points
         }
           if(b.points === a.points){
             return b.victories - a.victories; 
         }
+        
     })
     showRanking.innerHTML = '';
-    for(var i = 1;i < sorted.length; i++){
-        showRanking.innerHTML += '<tr><td>' + i + '</td><td>' + sorted[i].player + '</td><td>' + sorted[i].points + '</td><td>' + sorted[i].games + '</td><td>' + sorted[i].victories + '</td><td>' + sorted[i].nuls + '</td><td>' + sorted[i].defeats + '</td><td>' + sorted[i].goals + '</td></tr>'; 
+    
+    for(var i = 0 ;i < sorted.length; i++){
+        showRanking.innerHTML += '<tr><td>' + (i + 1) + '</td><td>' + sorted[i].player + '</td><td>' + sorted[i].points + '</td><td>' + sorted[i].games + '</td><td>' + sorted[i].victories + '</td><td>' + sorted[i].nuls + '</td><td>' + sorted[i].defeats + '</td><td>' + sorted[i].goals + '</td></tr>'; 
     }
 }
 
